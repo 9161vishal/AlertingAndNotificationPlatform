@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: AlertingAndNotificationPlatform
+  datasource:
+    url: jdbc:postgresql://localhost:5432/AlertNotificationDB
+    username: postgres
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
